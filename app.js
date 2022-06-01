@@ -25,10 +25,10 @@ const errorHandlerMiddleware = require("./middleware/error-handler");
 app.use(express.json());
 // extra packages
 
-app.use("trust proxy", 1);
+// app.use("trust proxy", 1);
 app.use(
   rateLimiter({
-    indowMs: 15 * 60 * 1000, // 15 minutes
+    windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100,
   })
 );
